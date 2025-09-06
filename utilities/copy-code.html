@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Snippet with Copy Feature - Tailwind CSS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <link rel="stylesheet" href="../output.css">
+    <style>
+        /* Custom syntax highlighting colors */
+        .keyword {
+            color: #f87171;
+        }
+
+        .string {
+            color: #6ee7b7;
+        }
+
+        .comment {
+            color: #9ca3af;
+            font-style: italic;
+        }
+
+        .function {
+            color: #60a5fa;
+        }
+
+        .number {
+            color: #f9a8d4;
+        }
+
+        /* Custom scrollbar for code blocks */
+        .code-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .code-scroll::-webkit-scrollbar-track {
+            background: #374151;
+        }
+
+        .code-scroll::-webkit-scrollbar-thumb {
+            background: #6b7280;
+            border-radius: 3px;
+        }
+
+        .code-scroll::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-t-xl p-8 text-center">
+            <h1 class="text-3xl font-bold mb-2">Code Snippet Display & Copy Feature</h1>
+            <p class="text-purple-100">বিভিন্ন programming language এর code snippet এবং copy functionality</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="bg-white rounded-b-xl shadow-xl p-8">
+            <!-- HTML Example -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-3">HTML Example</h2>
+                <p class="text-gray-600 mb-4">একটি সাধারণ HTML structure:</p>
+
+                <div class="relative bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+                    <!-- Code Header -->
+                    <div class="flex justify-between items-center bg-gray-800 px-4 py-3">
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded text-xs font-medium">HTML</span>
+                        <button onclick="copyCode(this)"
+                            class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-xs font-medium transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400">
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+                                <path
+                                    d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+                            </svg>
+                            Copy
+                        </button>
+                    </div>
+
+                    <!-- Code Block -->
+                    <pre class="code-scroll text-gray-200 p-6 overflow-x-auto text-sm leading-relaxed font-mono">&lt;!DOCTYPE html&gt;
+&lt;<span class="keyword">html</span> <span class="string">lang="en"</span>&gt;
+&lt;<span class="keyword">head</span>&gt;
+    &lt;<span class="keyword">meta</span> <span class="string">charset="UTF-8"</span>&gt;
+    &lt;<span class="keyword">title</span>&gt;My Website&lt;/<span class="keyword">title</span>&gt;
+&lt;/<span class="keyword">head</span>&gt;
+&lt;<span class="keyword">body</span>&gt;
+    &lt;<span class="keyword">h1</span>&gt;Hello World!&lt;/<span class="keyword">h1</span>&gt;
+    &lt;<span class="keyword">p</span>&gt;This is a sample paragraph.&lt;/<span class="keyword">p</span>&gt;
+&lt;/<span class="keyword">body</span>&gt;
+&lt;/<span class="keyword">html</span>&gt;</pre>
+                </div>
+            </div>
+
+            <!-- JavaScript Example -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-3">JavaScript Example</h2>
+                <p class="text-gray-600 mb-4">একটি JavaScript function example:</p>
+
+                <div class="relative bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+                    <!-- Code Header -->
+                    <div class="flex justify-between items-center bg-gray-800 px-4 py-3">
+                        <span class="bg-yellow-600 text-white px-3 py-1 rounded text-xs font-medium">JavaScript</span>
+                        <button onclick="copyCode(this)"
+                            class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-xs font-medium transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400">
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+                                <path
+                                    d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+                            </svg>
+                            Copy
+                        </button>
+                    </div>
+
+                    <!-- Code Block -->
+                    <pre
+                        class="code-scroll text-gray-200 p-6 overflow-x-auto text-sm leading-relaxed font-mono"><span class="comment">// Calculate factorial of a number</span>
+<span class="keyword">function</span> <span class="function">factorial</span>(<span class="string">n</span>) {
+    <span class="keyword">if</span> (<span class="string">n</span> &lt;= <span class="number">1</span>) {
+        <span class="keyword">return</span> <span class="number">1</span>;
+    }
+    <span class="keyword">return</span> <span class="string">n</span> * <span class="function">factorial</span>(<span class="string">n</span> - <span class="number">1</span>);
+}
+
+<span class="comment">// Usage example</span>
+<span class="keyword">console</span>.<span class="function">log</span>(<span class="function">factorial</span>(<span class="number">5</span>)); <span class="comment">// Output: 120</span></pre>
+                </div>
+            </div>
+
+            <!-- Python Example -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-3">Python Example</h2>
+                <p class="text-gray-600 mb-4">Python এ একটি class definition:</p>
+
+                <div class="relative bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+                    <!-- Code Header -->
+                    <div class="flex justify-between items-center bg-gray-800 px-4 py-3">
+                        <span class="bg-blue-600 text-white px-3 py-1 rounded text-xs font-medium">Python</span>
+                        <button onclick="copyCode(this)"
+                            class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-xs font-medium transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400">
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+                                <path
+                                    d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+                            </svg>
+                            Copy
+                        </button>
+                    </div>
+
+                    <!-- Code Block -->
+                    <pre
+                        class="code-scroll text-gray-200 p-6 overflow-x-auto text-sm leading-relaxed font-mono"><span class="comment"># Simple calculator class</span>
+<span class="keyword">class</span> <span class="function">Calculator</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="string">self</span>):
+        <span class="string">self</span>.<span class="string">result</span> = <span class="number">0</span>
+    
+    <span class="keyword">def</span> <span class="function">add</span>(<span class="string">self</span>, <span class="string">x</span>, <span class="string">y</span>):
+        <span class="keyword">return</span> <span class="string">x</span> + <span class="string">y</span>
+    
+    <span class="keyword">def</span> <span class="function">multiply</span>(<span class="string">self</span>, <span class="string">x</span>, <span class="string">y</span>):
+        <span class="keyword">return</span> <span class="string">x</span> * <span class="string">y</span>
+
+<span class="comment"># Usage</span>
+<span class="string">calc</span> = <span class="function">Calculator</span>()
+<span class="function">print</span>(<span class="string">calc</span>.<span class="function">add</span>(<span class="number">10</span>, <span class="number">5</span>))  <span class="comment"># Output: 15</span></pre>
+                </div>
+            </div>
+
+            <!-- CSS Example -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-3">CSS Example</h2>
+                <p class="text-gray-600 mb-4">Tailwind CSS utilities example:</p>
+
+                <div class="relative bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+                    <!-- Code Header -->
+                    <div class="flex justify-between items-center bg-gray-800 px-4 py-3">
+                        <span class="bg-pink-600 text-white px-3 py-1 rounded text-xs font-medium">CSS</span>
+                        <button onclick="copyCode(this)"
+                            class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-xs font-medium transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400">
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+                                <path
+                                    d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+                            </svg>
+                            Copy
+                        </button>
+                    </div>
+
+                    <!-- Code Block -->
+                    <pre class="code-scroll text-gray-200 p-6 overflow-x-auto text-sm leading-relaxed font-mono"><span class="comment">/* Tailwind CSS Card Component */</span>
+<span class="keyword">.card</span> {
+  <span class="string">@apply</span> <span class="function">bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300</span>;
+}
+
+<span class="keyword">.button-primary</span> {
+  <span class="string">@apply</span> <span class="function">bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200</span>;
+}
+
+<span class="keyword">.text-gradient</span> {
+  <span class="string">@apply</span> <span class="function">bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent</span>;
+}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message (Toast) -->
+    <div id="successToast"
+        class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-x-full opacity-0 transition-all duration-300 ease-out z-50">
+        <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+            </svg>
+            <span class="font-medium">Code copied to clipboard!</span>
+        </div>
+    </div>
+
+    <script>
+        function copyCode(button) {
+            // Find the code block within the same container
+            const codeContainer = button.closest('.relative');
+            const codeBlock = codeContainer.querySelector('pre');
+
+            // Get the text content (without HTML tags)
+            const codeText = codeBlock.textContent || codeBlock.innerText;
+
+            // Copy to clipboard using the modern Clipboard API
+            navigator.clipboard.writeText(codeText).then(function () {
+                // Update button appearance
+                const originalHTML = button.innerHTML;
+
+                // Show success state
+                button.innerHTML = `
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    Copied!
+                `;
+                button.className = button.className.replace('bg-green-500 hover:bg-green-600', 'bg-blue-500 hover:bg-blue-600');
+
+                // Show success toast
+                showSuccessToast();
+
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.className = button.className.replace('bg-blue-500 hover:bg-blue-600', 'bg-green-500 hover:bg-green-600');
+                }, 2000);
+
+            }).catch(function (err) {
+                console.error('Failed to copy code: ', err);
+
+                // Fallback for older browsers
+                fallbackCopyToClipboard(codeText);
+                showSuccessToast();
+            });
+        }
+
+        // Fallback copy method for older browsers
+        function fallbackCopyToClipboard(text) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                document.execCommand('copy');
+                console.log('Fallback: Copying text command was successful');
+            } catch (err) {
+                console.error('Fallback: Unable to copy', err);
+            }
+
+            document.body.removeChild(textArea);
+        }
+
+        // Show success toast notification
+        function showSuccessToast() {
+            const toast = document.getElementById('successToast');
+
+            // Show toast
+            toast.classList.remove('translate-x-full', 'opacity-0');
+            toast.classList.add('translate-x-0', 'opacity-100');
+
+            // Hide toast after 3 seconds
+            setTimeout(() => {
+                toast.classList.add('translate-x-full', 'opacity-0');
+                toast.classList.remove('translate-x-0', 'opacity-100');
+            }, 3000);
+        }
+
+        // Add keyboard shortcut (Ctrl+C) for focused code blocks
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && e.key === 'c') {
+                const focusedElement = document.activeElement;
+                if (focusedElement.tagName === 'PRE') {
+                    e.preventDefault();
+                    const container = focusedElement.closest('.relative');
+                    const copyBtn = container.querySelector('button');
+                    copyCode(copyBtn);
+                }
+            }
+        });
+
+        // Add click-to-focus functionality for code blocks
+        document.querySelectorAll('pre').forEach(pre => {
+            pre.setAttribute('tabindex', '0');
+            pre.addEventListener('click', function () {
+                this.focus();
+            });
+        });
+    </script>
+</body>
+
+</html>
